@@ -1,2 +1,2 @@
-# eatgreaterdsm.org
-Website built to Eat Greater Des Moines in 2016
+# Eat Greater Des Moines
+Here is the original code for the Eat Greater Des Moines website which I volunteer-developed in 2016.

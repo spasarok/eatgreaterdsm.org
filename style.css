@@ -1,0 +1,773 @@
+/*
+Theme Name: eat
+Author: Kim Spasaro
+*/
+
+/* Generics */
+html {
+    position: relative;
+    width: 100%;
+}
+body{
+    color: #666;
+    font-size: 20px;
+    font-weight: 200;
+}
+section{
+    position: relative;
+    padding: 60px 30px;
+}
+p{
+    font-size: 20px;
+    line-height: 1.5em;
+}
+a:hover,
+a:focus,
+a:active,
+a:visited{
+    text-decoration: none;
+    outline: 0;
+}
+a.small-link{
+    font-size: 16px;
+    float: right;
+}
+.quote-wrapper{
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+}
+.quote{
+    text-align: left;
+    font-size: 26px;
+    font-style: italic;
+    padding: 20px;
+    color: #f15c22;
+}
+h1{
+    font-size: 60px;
+    font-family: 'Comfortaa', sans-serif;
+    color: #f15c22;
+}
+h2 a,
+h2 a:hover,
+h2 a:active,
+h2 a:visited{
+    color: #666;
+    text-decoration: none;
+}
+.container.banner{
+    width: 100%;
+    overflow: hidden;
+    background-color: #c1d72e;
+    padding: 30px;
+}
+.container.banner > picture{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.full{
+    width: 100%;
+}
+.full-height{
+    height: 100%;
+}
+.first{
+    padding-top: 0;
+}
+.hidden-nonimp{
+    display: none;
+}
+.visible{
+    display: block;
+}
+.shadow{
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* Colors */
+.bg-white{
+    background-color: #fff;
+}
+.bg-green{
+    background: #c1d72e;
+}
+.bg-gray{
+    background: #ebebeb;
+}
+.border-top-green{
+    border-top: #c1d72e 8px solid;
+}
+
+/* Cards for background images*/
+.card{
+    position: relative;
+    padding: 30px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.card time{
+    display: block;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.card ul{
+    padding-left: 0;
+}
+.card li{
+    list-style: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+.card li:last-of-type{
+    border-bottom: none;
+}
+.card .events-link{
+    position: absolute;
+    font-size: 16px;
+    bottom: 15px;
+    right: 20px;
+}
+
+/* Donate button */
+.donate-button{
+    text-align: center;
+}
+.donate-button input[type=submit]{
+    padding: 20px;
+    margin: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: #f15c22;
+    border: 0px;
+}
+
+/* Bootstrap overrides */
+.container{
+    padding: 30px;
+}
+.container .title{
+    padding-bottom: 0;
+}
+.container p{
+    font-size: 20px;
+}
+.container h2{
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: #c1d72e 4px solid;
+}
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+@media only screen and (max-width: 479px){
+    [class *= "col-"]{
+        display: block;
+    }
+}
+
+/* Header */
+body > header{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    /*background-image:url("assets/images/header-home.jpg");
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;*/
+}
+body > header .hero{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+body > header picture {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+body > header picture img{
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
+body > header .logo-wrapper{
+    position: absolute;
+    top: 0;
+    padding-top: 80px;
+    width: 100%;
+    text-align: center;
+}
+body > header .logo{
+    display: inline-block;
+    width: 350px;
+    height: 300px;
+    background-image:url("assets/images/logo-color-small.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+body > header .mobile-drop-menu{
+    display: none;
+}
+body > header .nav-menu{
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    z-index: 999;
+    margin-bottom: 0;
+}
+body > header .nav-menu li{
+    display: inline-block;
+    position: relative;
+    padding-bottom: 10px;
+}
+body > header .nav-menu > li a{
+    display: block;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Comfortaa', sans-serif;
+}
+body > header .nav-menu li > ul{
+    display: none;
+}
+body > header .nav-menu li:hover > ul{
+    display: block;
+    position: absolute;
+    padding: 0;
+    width: 250px;
+    background: #fff;
+    top: 73;
+    left: 0;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+body > header .nav-menu li:hover > ul li{
+    width: 100%;
+    /*border-top: 4px solid #c1d72e;*/
+    border: 1px solid #ebebeb;
+    padding-bottom: 0;
+}
+body > header .nav-menu li > ul > li a{
+    color: #666;
+}
+body > header .nav-menu li > ul > li a:hover{
+    text-decoration: none;
+}
+body > header .nav-menu .donate a{
+    /*background-color: #c1d72e;*/
+    border: 1px solid #fff;
+}
+
+/* Main */
+main > header{
+    background-color: #c1d72e;
+    margin: 0;
+}
+main > header h1{
+    color: #fff;
+}
+
+/* Home page */
+.home .mission{
+    text-align: center;
+}
+.home .mission .row{
+    max-width: 800px;
+    text-align: left;
+    margin: auto;
+}
+.home .mission #iowa{
+    max-width: 200px;
+}
+.home .mission .statement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 150px;
+}
+.home .events{
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    /*background-image:url("assets/images/divider-carrots.jpg");
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;*/
+}
+.home .events picture img{
+    width: 100%;
+}
+.home .events .card{
+    margin: 25px;
+    height: 350px;
+}
+@media only screen and (min-width:992px) and (max-width:1200px){
+    .home .events .card{
+        margin: 0;
+    }
+}
+
+/* About page */
+.about .who-we-serve{
+    box-sizing: border-box;
+}
+.about .who-we-serve picture{
+    position: absolute;
+    top: -100px;
+}
+
+@media only screen and (min-width: 1201px){
+    .about .who-we-serve picture{
+        position: absolute;
+        top: -100px;
+        left: -300px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .about .who-we-serve > picture{
+        left: -200px;
+        top: -100px;
+    }
+}
+.about .who-we-serve > picture > img{
+    width: 100%;
+}
+@media only screen and (max-width: 767px){
+    .about .banner > picture > img{
+        height: 100%;
+    }
+}
+.about .who-we-serve .container{
+    margin-right: 0;
+    margin-left: 0;
+
+}
+@media only screen and (max-width: 767px){
+    .about .who-we-serve .container{
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+@media only screen and (min-width: 1201px){
+    .about .who-we-serve .container{
+        max-width: 100%;
+    }
+}
+.about .who-we-serve .container .card{
+    float: right;
+}
+@media only screen and (max-width: 767px){
+    .about .who-we-serve .container .card{
+        width: 100%;
+    }
+}
+
+/* Focus area page */
+section.focus-areas [class*='col-']{
+    text-align: center;
+}
+section.focus-areas .focus-area img{
+    border-radius: 50%;
+    border: #c1d72e 8px solid;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+section.focus-areas .focus-area img:hover{
+    border: #f15c22 8px solid;
+}
+
+
+/* Donate page */
+.container.banner.gift > picture{
+    top: -150px;
+    left: 0;
+}
+@media only screen and (max-width: 1200px){
+    .gift > picture{
+        top: -150px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .gift > picture {
+        top: 0;
+    }
+}
+@media only screen and (max-width: 479px){
+    .gift > picture {
+        display: none;
+    }
+}
+@media only screen and (min-width: 1201px){
+    .donate .gift > picture > img{
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 767px){
+    .donate .gift .container .card {
+        width: 100%;
+
+    }
+}
+
+
+/* Footer */
+footer{
+    background-color: #c1d72e;
+    text-align: center;
+}
+footer .widget-space{
+    background-color: #f15c22;
+    padding: 15px;
+}
+footer form{
+    margin-bottom: 0;
+}
+footer input{
+    border-radius: 2px;
+    border: 1px solid #fff;
+    margin: 5px;
+    padding: 15px;
+    height: 57px;
+    font-size: 20px;
+    width: 250px;
+}
+footer input[type="submit"]{
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 0;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+footer .jumbotron{
+    margin-bottom: 0;
+    padding-bottom: 25px;
+}
+footer .footer-buttons{
+    margin: 40px 0 70px;
+}
+footer .footer-buttons a{
+    padding: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+footer .footer-buttons a:not(.donate-button){
+    border: 1px solid #fff;
+}
+footer .footer-buttons .donate-button{
+    background: #f15c22;
+}
+footer .footer-text p{
+    padding: 0 15px;
+    font-size: 18px;
+}
+
+
+/* Single - Toggle Map Location */
+.toggle-maps-location .toggle-maps-wrapper{
+    max-width: 700px;
+    height: 400px;
+}
+.toggle-maps-location .toggle-maps.info-window .marker-more-info{
+    display: none;
+}
+.toggle-maps-location .toggle-maps.info-window .separator{
+    display: none;
+}
+.toggle-maps-location .details{
+    padding: 10px 0;
+}
+.toggle-maps-location .details div {
+    dislay: block;
+}
+.toggle-maps-location .details h3{
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 20px;
+    display: inline-block;
+    color: #f15c22;
+    margin: 0;
+    padding: 7px 10px 7px 0;
+}
+body #toggle-map{
+    height: 75%;
+}
+
+
+/* Toggle Maps plugin */
+.toggle{
+    padding: 10px 15px;
+    background-color: #f15c22;
+    text-align: left;
+    color: #fff;
+    border: 0;
+}
+.toggle.active{
+    background-color: #c1d72e;
+}
+
+/* Events calendar */
+.tribe-events-meta-group .tribe-events-single-section-title{
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: #c1d72e 4px solid;
+    font-size: 30px;
+}
+.tribe-events-single-section.tribe-events-event-meta dt{
+    margin-top: 10px
+}
+.tribe-events-single-section.tribe-events-event-meta .tribe-events-meta-group{
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+.tribe-events-single-section.tribe-events-event-meta .tribe-events-meta-group-details{
+    display: none;
+}
+
+@media only screen and (min-width: 992px){
+    body > header .nav-mobile{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:991px){
+    body > header.max-height{
+        max-height: 500px;
+    }
+    body > header .mobile-drop-menu{
+        display: inline-block;
+        padding: 40px;
+        color: #fff;
+        font-size: 24px;
+        font-family: 'Comfortaa', sans-serif;
+    }
+    body .hero{
+        max-height: 500px;
+    }
+    body header{
+        overflow: hidden;
+    }
+    body > header picture{
+        top: 0;
+        max-height: 500px;
+    }
+    body > header nav{
+        display: none;
+        background-color: #fff;
+    }
+    body > header .logo{
+        width: 250px;
+        height: 250px;
+    }
+    body header .title h1{
+        padding: 50px 0;
+    }
+    body > header .nav-menu{
+        position: static;
+        padding-left: 0;
+    }
+    body > header .nav-menu li{
+        display: block;
+        padding-bottom: 1px;
+        background-color: #fff;
+    }
+    body > header .nav-menu li > ul{
+        display: block;
+    }
+    body > header .nav-menu > li > a{
+        background-color: #f15c22;
+    }
+    body > header .nav-menu ul > li > ul{
+        display: block;
+    }
+    body > header .nav-menu li > ul {
+        display: block;
+        position: static;
+        padding-left: 0;
+    }
+    body > header .nav-menu li:hover > ul{
+        display: block;
+        position: static;
+        width: auto;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    body > header .nav-menu li:hover > ul li{
+        border: none;
+    }
+    body > header .nav-menu .donate a {
+        border: none;
+    }
+    body .container{
+        margin: 0;
+        width: 100%;
+    }
+    body section.banner.container .card{
+        float: none;
+        background: none;
+        color: #fff;
+    }
+    body section.banner.container .card{
+        width: auto;
+        max-width: 100%;
+    }
+    body section.banner.container .card h2,
+    body section.banner.container .card h2 a{
+        color: #fff;
+    }
+    body section.banner.container .container,{
+        width: 100%;
+    }
+    body section.banner .container.full{
+        padding: 0;
+    }
+    header .container{
+        padding: 0 75px;
+    }
+    .banner{
+        border-top: 40px solid #f15c22;
+    }
+    .banner > .container{
+        margin-top: -40px;
+    }
+    .banner > picture > img{
+        display: none;
+    }
+    .card li{
+        padding: 25px 0;
+    }
+    .quote{
+        font-size: 40px;
+        padding: 20px 50px;
+    }
+    .donate-button input[type=submit]{
+        font-size: 50px;
+        height: auto;
+        padding: 30px;
+    }
+
+    /* Home */
+    .home .events picture img{
+        width: auto;
+        height: 100%;
+    }
+    .home .events .card{
+        height: auto;
+        padding: 0px 20px 5px;
+    }
+    .home .events .card p{
+        display: none;
+    }
+    section.focus-areas .focus-area a{
+        display: block;
+    }
+    section.focus-areas .focus-area img{
+        max-width: 65%;
+    }
+    .home .mission .image{
+        text-align: center;
+    }
+    .home .mission #iowa{
+        max-width: 300px;
+        padding-bottom: 50px;
+    }
+
+    /* About */
+    .about .banner > picture{
+        width: auto;
+    }
+    .about .banner > picture > img{
+        width: auto;
+    }
+
+    /* Footer */
+    footer input{
+        width: 100%;
+    }
+    footer .footer-buttons a{
+        padding: 32px;
+        font-size: 32px;
+    }
+
+    /* Fonts */
+    body{
+        font-size: 40px;
+    }
+    h1, h2{
+        font-size: 64px;
+    }
+    h3{
+        font-size: 50px;
+    }
+    p{
+        font-size: 40px;
+    }
+    .container p{
+        font-size: 40px;
+    }
+    .container h1{
+        font-size: 64px;
+    }
+    body > header .mobile-drop-menu{
+        font-size: 50px;
+    }
+    body > header .nav-menu > li a{
+        font-size: 50px;
+        padding: 30px;
+    }
+    .focus-area h2 a{
+        font-size: 50px;
+    }
+    .focus-area a img{
+        margin-bottom: 45px;
+    }
+    .toggle-maps-location .details h3{
+        font-size: 40px;
+    }
+    .card time{
+        font-size: 32px;
+    }
+    .card .events-link{
+        font-size: 32px;
+        display: block;
+        position: static;
+    }
+    footer input{
+        font-size: 40px;
+        height: auto;
+        padding: 30px;
+    }
+    footer input[type="submit"]{
+        font-size: 40px;
+        height: auto;
+        padding: 30px;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .card{
+        max-width: 450px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    body > header picture {
+        bottom: -100px;
+        right: -200px;
+    }
+}

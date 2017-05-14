@@ -1,0 +1,3 @@
+<section class="board">
+
+</section>

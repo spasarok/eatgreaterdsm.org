@@ -1,0 +1,2 @@
+
+alert($('.div').length);
